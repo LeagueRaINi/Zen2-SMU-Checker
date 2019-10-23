@@ -76,7 +76,7 @@ namespace SMUC
 
                 Log($"Scanning: {biosName} ({BytesToKB(biosBytes.Length).ToString("N0")} KB)", newLine: false);
 
-                var agesaVersion = SearchPattern(biosBytes, "3D 9B 25 70", 0xD)
+                var agesaVersion = SearchPattern(biosBytes, "3D 9B 25 70 41 47 45 53 41", 0xD)
                     .FirstOrDefault();
                 if (agesaVersion != 0)
                 {
